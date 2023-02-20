@@ -19,7 +19,6 @@ const camera = new THREE.PerspectiveCamera(
 
 // 设置相机位置
 camera.position.set(0,0,10)
-
 // 加入场景
 scene.add(camera)
 
@@ -36,6 +35,9 @@ const cubeMaterial = new THREE.MeshBasicMaterial({color: 0xffff00})
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 scene.add(cubeMesh)
 
+// 导入纹理
+const textureLoader = new THREE.TextureLoader()
+textureLoader.load()
 
 // 初始化渲染器
 const renderer = new THREE.WebGL1Renderer()
